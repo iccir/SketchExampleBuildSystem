@@ -1,0 +1,32 @@
+{
+    "name": "Example Build System",
+    "description": "A Plugin for automating my daily export->compress->copy-into-folder workflow",
+    "author": "Ricci Adams",
+    "authorEmail": "git@ricciadams.com",
+    "version": "0.1",
+    "identifier": "com.example.ExampleSketchBuildSystem.822BB12F-5159-4E1F-B93F-E8D3765F1A30",
+    "homepage": "https:/github.com/iccir/SketchExampleBuildSystem",
+    "compatibleVersion": 45,
+    "disableCocoaScriptPreprocessor": true,
+
+    "commands": [
+        {
+            "script" : "plugin.js",
+            "handler" : "exportedEditOutputPathCommand",
+            "shortcut" : "",
+            "name" : "Edit Output Path…",
+            "identifier" : "editOutputPathCommand"
+        }, {
+            "script" : "plugin.js",
+            "handler" : "exportedBuildCommand",
+            "shortcut" : "cmd \u000a",
+            "name" : "Build",
+            "identifier" : "buildCommand"
+        }
+    ],
+
+    "menu": {
+        "items" : [ "editOutputPathCommand", "buildCommand" ],
+        "title" : "Example Build System"
+    }
+}
