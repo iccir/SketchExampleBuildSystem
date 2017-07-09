@@ -6,7 +6,7 @@ This is a public version of that Plugin, written as example code with the hope o
 
 Begin brain dump:
 
---
+---
 
 ## Overview
 
@@ -20,8 +20,6 @@ My ideal workflow is as follows:
 
 [Sketch Image Compressor](https://github.com/BohemianCoding/sketch-image-compressor) comes close to this, but it lacks Step 2 and Step 5.
 
---
-
 ## Setting up Output Paths
 
 Use `Example Build System -> Edit Output Path…` to specify an output path . This path is *relative to the git repository root*.
@@ -33,8 +31,6 @@ This example contains two Sketch files:
 * `ExampleProject/Art/ForApp.sketch` provides artwork for a hypothetical iOS app at `ExampleProject/SingleViewApp`. The output path is set to `ExampleProject/SingleViewApp/SingleViewApp/Assets.xcassets`. During a build, the plug-in will find an existing file in the `xcassets` folder and overwrite it.
 
 Output paths are persisted using `-[MSPluginCommand setValue:forKey:onDocument:]` and `-[MSPluginCommand valueForKey:onDocument:]`. There is a limitation of one output path per document (I always use separate documents for my web resources vs. iOS resources).
-
---
 
 ## The Build Process
 
@@ -55,8 +51,6 @@ Each shell script task performs the following:
 6. If they are different (or if no existing file is present): `pngcrush`, `optipng`, and `zopflipng` are ran.
 
 7. The `ohSH` hash is written to the crushed PNG file and it is copied to location from Step 4.
-
---
 
 ## Acknowledgements
 
