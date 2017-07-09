@@ -18,7 +18,7 @@ My ideal workflow is as follows:
 4. It runs `pngcrush`/`optipng`/etc.
 5. It copies the crushed files into my project's build results and/or my Xcode xcassets catalog **without me specifying a save location**.
 
-[Sketch Image Compressor](https://github.com/BohemianCoding/sketch-image-compressor) comes close to this, but it lacks Step 2 and Step 5.
+[Sketch Image Compressor](https://github.com/BohemianCoding/sketch-image-compressor) comes close to this, but lacks Step 2 and Step 5.
 
 ## Setting up Output Paths
 
